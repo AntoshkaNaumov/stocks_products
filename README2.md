@@ -1,8 +1,21 @@
+# Типовые команды для запуска контейнера c backend-сервером
+
+## Сборка образа Docker с заданием имени образу
+
 docker build -t stocks_products .
+
+## Показать доступные локально образы
+
 docker images
-docker run --name stocks stocks_products
-docker run --name stocks -d stocks_products
+
+## Запуск контейнера Docker с заданием имени, экспорт порта контейнера
+
 docker run --name stocks -p 8000:8000 stocks_products
-docker volume create stocks
-docker volume ls
-docker run --name stocks -p 8000:8000 -v stocks:/app/ stocks_products
+
+## Показать работающие контейнеры
+
+docker ps
+
+## Посмотреть существующием на нашем хосте контейнеры докера
+
+docker ps -a
